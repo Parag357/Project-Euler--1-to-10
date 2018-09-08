@@ -4,23 +4,16 @@ public class Q9 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		for(int a=1;a<1000;a++)
+		int a,b,c;
+		for(a=1;a<1000;a++)
 		{
-			for(int b=1;b<1000;b++)
+			for(b=a+1;b<1000;b++)
 			{
-				for(int c=1;c<1000;c++)
-				{
-					if((a*a)+(b*b)==(c*c))
-					{
-						if(a+b+c==1000)
-						{
-							System.out.println((a*b*c));
-							System.exit(0);
+			 c=1000-(a+b);
+					if(Math.pow(a,2)+Math.pow(b, 2)==Math.pow(c, 2))
+					System.out.println(" the nos are : "+a+" , "+b+" , "+c+" and their product is : "+(a*b*c));
 						}
 					}
 				}
 			}
-		}
-	}
-
-}
+		
