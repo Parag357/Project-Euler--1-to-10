@@ -1,17 +1,23 @@
 
+
 public class Q5 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		for(int i=100000;i<=1000000000;i++)
+int lcm=11,n1,n2;
+		for(int i=12;i<20;i++)
 		{
-			if((i%20==0)&&(i%19==0)&&(i%18==0)&&(i%17==0)&&(i%16==0)&&(i%15==0)&&(i%14==0)&&(i%13==0)&&(i%12==0)&&(i%11==0))
-			
-		{System.out.println(i);
-		System.exit(0);
-				}
+			n1=lcm;n2=i;
+			while(n1!=n2)
+			{
+				if(n1>n2)
+					n1-=n2;
+				else
+					n2-=n1;
+			}
+			lcm=(lcm*i)/n1;
+		}
+		System.out.println(lcm);
 		}
 	}
 
-}
