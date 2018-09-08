@@ -5,22 +5,15 @@ public class Q3 {
 		// TODO Auto-generated method stub
 
 		long ln= 6008514751431L;
-		for(long i=ln/2;i>0;i--)
-		{
-			if(ln%i==0)
+		int max=0;
+		for (int i=2; i<= ln;i++)
+			while (ln % i == 0)
 			{
-			int c=0;
-			for(long j=2;j<=i/2;j++)
-			{
-				if(i%j==0)
-					c++;
-			}
-			if(c==0)
-			
-					System.out.println("the largest prime factor of given number is "+i);
-					System.exit(0);
-				}
-			}
+				if(i>max)
+				max=i;
+				ln/=i;
+			}	
+		System.out.println("the greatest prime factor of the given number is :"+max);
 		}
 	}
 
